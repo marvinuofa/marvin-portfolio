@@ -818,142 +818,87 @@ section {
   }
 }
 
-/* ---------- Contact ---------- */
-.contact {
-  padding: 110px 18px;
-  border-top: 1px solid rgba(238, 242, 247, 0.06);
+/* ---------- Contact (match Projects cards) ---------- */
+#contacts{
+  padding: 110px 18px; /* match .projects padding */
   background: var(--bg);
+  border-top: 1px solid rgba(238, 242, 247, 0.06);
+  text-align: center;
 }
 
-.contact-inner {
+#contacts h1{
+  margin: 0 0 70px;     /* match projects-title spacing */
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: var(--text);
+}
+
+/* Grid = same as projects-grid */
+.contact-grid{
   max-width: 1100px;
   margin: 0 auto;
-}
-
-/* Title style consistent with other sections */
-.contact-head {
-  text-align: center;
-  margin-bottom: 46px;
-}
-
-.contact-title {
-  margin: 0;
-  font-size: 32px;      /* match About/Projects/Experience */
-  font-weight: 800;
-  letter-spacing: 0.2px;
-}
-
-.contact-subtitle {
-  margin: 12px auto 0;
-  max-width: 70ch;
-  color: rgba(238, 242, 247, 0.72);
-  font-size: 16px;      /* match body sizing */
-  line-height: 1.75;
-  font-weight: 500;
-}
-
-/* Form wrapper (single column is fine) */
-.contact-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
 }
 
-.contact-right {
-  width: 100%;
-  max-width: 640px; /* nice readable form width */
-}
-
-/* Form */
-.contact-form {
-  display: grid;
-  gap: 16px;
+/* Card = same feel as project-card */
+.contact-card{
   background: rgba(238, 242, 247, 0.06);
   border-radius: 16px;
-  padding: 22px;
+  padding: 28px 22px 24px;
+  min-height: 190px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
   box-shadow: 0 0 0 1px rgba(238, 242, 247, 0.08) inset;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
-.field {
-  display: grid;
-}
-
-.field-label {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.25px;
-  color: rgba(238, 242, 247, 0.85);
-}
-
-.field-input {
-  width: 100%;
-  border: 0;
-  outline: none;
-  border-radius: 12px;
-  padding: 14px 16px;
-
-  font-size: 15px;
-  color: var(--text);
-  background: rgba(238, 242, 247, 0.07);
-  box-shadow: 0 0 0 1px rgba(238, 242, 247, 0.06) inset;
-  transition: box-shadow 180ms ease, transform 180ms ease, background 180ms ease;
-}
-
-.field-input::placeholder {
-  color: rgba(238, 242, 247, 0.55);
-}
-
-.field-input:hover {
-  background: rgba(238, 242, 247, 0.085);
-  box-shadow: 0 0 0 1px rgba(238, 242, 247, 0.10) inset;
-}
-
-.field-input:focus {
-  transform: translateY(-1px);
+.contact-card:hover{
+  transform: translateY(-2px);
+  background: rgba(160, 210, 255, 0.18);
   box-shadow:
-    0 0 0 1px rgba(160, 210, 255, 0.35) inset,
-    0 0 0 4px rgba(160, 210, 255, 0.18);
+    0 12px 30px rgba(160, 210, 255, 0.22),
+    0 0 0 1px rgba(160, 210, 255, 0.25) inset;
 }
 
-.field-textarea {
-  resize: vertical;
-  min-height: 120px;
+/* Icon */
+.contact-card i{
+  color: rgba(238, 242, 247, 0.95);
+  font-size: 56px;
+  line-height: 1;
+  margin-bottom: 14px;
 }
 
-/* Submit button (matches your icy-blue CTA style) */
-.contact-submit {
-  border: 0;
-  cursor: pointer;
-  width: 100%;
-  padding: 14px 18px;
-  border-radius: 12px;
-
-  color: rgba(160, 210, 255, 0.95);
-  background: rgba(160, 210, 255, 0.14);
-  font-weight: 900;
+/* Text = similar to project-name/project-desc vibe */
+.contact-card p{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
   letter-spacing: 0.2px;
-  font-size: 15px;
-
-  box-shadow:
-    0 4px 14px rgba(0, 0, 0, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18);
-
-  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+  color: rgba(238, 242, 247, 0.90);
 }
 
-.contact-submit:hover {
-  transform: translateY(-1px);
-  background: rgba(160, 210, 255, 0.22);
-  box-shadow:
-    0 10px 28px rgba(160, 210, 255, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+
+/* Responsive = same breakpoint behavior as projects */
+@media (max-width: 980px){
+  .contact-grid{
+    grid-template-columns: 1fr;
+  }
+
+  #contacts h1{
+    margin-bottom: 46px;
+  }
 }
 
-.contact-submit:active {
-  transform: translateY(0);
-}
+
 
 
 /* ---------- Footer ---------- */
