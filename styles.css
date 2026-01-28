@@ -446,7 +446,7 @@ section {
 /* Text */
 .about-text p {
   margin: 0 0 18px;
-  max-width: 60ch;
+  max-width: 53ch;
   color: rgba(11, 15, 20, 0.92);
   font-size: 16px;
   line-height: 1.75;
@@ -546,7 +546,7 @@ section {
 }
 
 .experience-inner {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -590,7 +590,7 @@ section {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.2px;
-  color: rgba(238, 242, 247, 0.65);
+  color: white;
 }
 
 /* icon column */
@@ -621,10 +621,10 @@ section {
 
 .xp-text {
   margin: 12px 0 0;
-  max-width: 72ch;
-  color: rgba(238, 242, 247, 0.88);
-  font-size: 16px;          /* match About */
-  line-height: 1.75;
+  max-width: 60ch;
+  color: white;
+  font-size: 14px;          /* match About */
+  line-height: 1.5;
   font-weight: 500;         /* match About */
 }
 
@@ -689,11 +689,11 @@ section {
 }
 
 .edu-line {
-  margin: 12px 0 0;
-  font-size: 16px;
-  line-height: 1.75;
+  margin-top: 9px;
+  font-size: 14px;
+  line-height: 1;
   font-weight: 500;
-  color: rgba(238, 242, 247, 0.88);
+  color: white;
 }
 
 /* Responsive */
